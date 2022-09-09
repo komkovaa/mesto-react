@@ -6,9 +6,9 @@ import Card from "./Card";
 function Main(props) {
 
     //Стейты для данных из API
-    const [userName, setUserName] = useState();
-    const [userDescription, setUserDescription] = useState();
-    const [userAvatar, setUserAvatar] = useState();
+    const [userName, setUserName] = useState("");
+    const [userDescription, setUserDescription] = useState("");
+    const [userAvatar, setUserAvatar] = useState("");
     const [cards, setCards] = useState([]);
 
     //эффект, вызываемый при монтировании компонента, который совершает запрос в API за пользовательскими данными
@@ -52,7 +52,11 @@ function Main(props) {
             </section>
 
             <ul className="elements-list">
-                {cards.map((card) => {return <Card key={card._id} card={card} onCardClick={props.onCardClick}/>})}
+                {cards.map((card) => 
+                    {return (
+                        <Card key={card._id} card={card} onCardClick={props.onCardClick}/>
+                        );
+                    })}
             </ul>
 
         </main>

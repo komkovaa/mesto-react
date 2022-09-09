@@ -1,13 +1,13 @@
 import React from "react";
 
-function PopupWithForm(props) {
+function PopupWithForm({name, isOpen, onClose, title, children,submit}) {
     return (
-        <div className={`popup popup_type_${props.name} ${props.isOpen ? 'popup_opened' : ''}`}>
+        <div className={`popup popup_type_${name} ${isOpen ? 'popup_opened' : ''}`}>
             <form className="popup__form">
-                <button className="popup__close" type="button" aria-label="close" onClick={props.onClose}></button>
-                <h2 className="popup__message">{props.title}</h2>
-                {props.children}
-                <button className="popup__submit" type="submit" value="Создать">{props.submit}</button>
+                <button className="popup__close" type="button" aria-label="close" onClick={onClose}></button>
+                <h2 className="popup__message">{title}</h2>
+                {children}
+                <button className="popup__submit" type="submit" value="Создать">{submit}</button>
             </form>
         </div>
     )
