@@ -28,8 +28,7 @@ function App() {
   function handleCardClick(res) { setSelectedCard(res) }
 
   return (
-    <div className="page">
-      <div className='container'>
+    <div className="page">      
         <Headers />
         <Main
           onEditProfile={handleEditProfileClick} //передаем обработчики с помощью пропса, вызывваем в main.js
@@ -65,8 +64,6 @@ function App() {
         <PopupWithForm isOpen={false} onClose={closeAllPopups} name="confirm" title="Вы уверены?" submit="Да" />
 
         <ImagePopup card={selectedCard} onClose={closeAllPopups} />
-
-      </div>
     </div>
   );
 }
