@@ -11,7 +11,7 @@ function Main(props) {
             <section className="profile">
                 <div className="profile__person">
                     <button className="profile__avatar-container" type='button' onClick={props.onEditAvatar}>
-                        <img className="profile__avatar" src={currentUser.avatar} alt="Аватар"  />
+                        <img className="profile__avatar" src={currentUser.avatar} alt="Аватар" />
                     </button>
                     <div className="profile__info">
                         <div className="profile__block">
@@ -25,11 +25,11 @@ function Main(props) {
             </section>
 
             <ul className="elements-list">
-                {props.cards.map((card) => 
-                    {return (
-                        <Card key={card._id} card={card} onCardClick={props.onCardClick} onCardLike={props.onCardLike} onCardDelete={props.onCardDelete}/>
-                        );
-                    })}
+                {props.cards.map((card) => {
+                    return (
+                        <Card key={card._id} card={card} onCardClick={props.onCardClick} onCardLike={props.onCardLike} onCardDelete={props.onCardDelete} />
+                    );
+                })}
             </ul>
 
         </main>

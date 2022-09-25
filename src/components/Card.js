@@ -35,7 +35,7 @@ function Card(props) {
     }
 
     return (
-        <li className="element">
+        <div className="element">
             <img className="element__image" src={props.card.link} alt={`Картинка ${props.card.name}`} onClick={handleClick} />
             <h2 className="element__name">{props.card.name}</h2>
             <div className="element__like-section">
@@ -43,7 +43,7 @@ function Card(props) {
                 <span className="element__like-counter">{props.card.likes.length}</span>
             </div>
             <button className={cardDeleteButtonClassName} type="button" onClick={handleDeleteClick}></button>
-        </li>
+        </div>
     )
 }
 
